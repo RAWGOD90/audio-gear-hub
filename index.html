@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>사운드픽 | 10~40만 원대 음향기기 비교·추천 (헤드폰·이어폰·스피커·오디오 인터페이스)</title>
+<meta name="description" content="출퇴근 노이즈캔슬링, 음악 작업용 모니터링, 데스크 스피커까지. 10~40만 원대 음향기기 8종을 실제 스펙과 최저가로 나란히 비교하세요." />
+<meta name="robots" content="index,follow" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="사운드픽 | 10~40만 원대 음향기기 비교·추천" />
+<meta property="og:description" content="노캔 헤드폰부터 오디오 인터페이스까지, 8종을 용도·예산으로 골라 한눈에 비교." />
+<meta property="og:locale" content="ko_KR" />
+<meta property="og:url" content="https://rawgod90.github.io/audio-gear-hub/" />
+<link rel="canonical" href="https://rawgod90.github.io/audio-gear-hub/" />
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --bg-soft: #eef0f4;
+    --card: #ffffff;
+    --ink: #14161a;
+    --ink-soft: #40454f;
+    --muted: #6b7280;
+    --line: #e5e7eb;
+    --line-strong: #d5d8de;
+    --accent: #4f46e5;
+    --accent-2: #7c3aed;
+    --accent-soft: #eef0ff;
+    --commute: #2563eb;
+    --work: #0f9d76;
+    --desk: #d97706;
+    --radius: 18px;
+    --shadow-sm: 0 1px 2px rgba(16, 24, 40, .05);
+    --shadow-md: 0 8px 24px rgba(16, 24, 40, .08);
+    --shadow-lg: 0 24px 60px rgba(16, 24, 40, .16);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e1014;
+      --bg-soft: #151922;
+      --card: #171b23;
+      --ink: #f3f4f6;
+      --ink-soft: #cfd3db;
+      --muted: #9aa1ae;
+      --line: #262b35;
+      --line-strong: #333a47;
+      --accent: #8b87ff;
+      --accent-2: #b18cff;
+      --accent-soft: #1d2038;
+      --commute: #7aa7ff;
+      --work: #43cfa1;
+      --desk: #f0a93b;
+      --shadow-sm: 0 1px 2px rgba(0, 0, 0, .5);
+      --shadow-md: 0 8px 24px rgba(0, 0, 0, .45);
+      --shadow-lg: 0 24px 60px rgba(0, 0, 0, .6);
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Apple SD Gothic Neo",
+      "Malgun Gothic", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    word-break: keep-all;
+  }
+  img { max-width: 100%; display: block; }
+  [id] { scroll-margin-top: 76px; }
+  a { color: inherit; }
+  button { font: inherit; color: inherit; }
+  :focus-visible { outline: 3px solid color-mix(in srgb, var(--accent) 60%, transparent); outline-offset: 2px; border-radius: 8px; }
+  .wrap { width: min(1180px, 100% - 2.5rem); margin-inline: auto; }
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
+
+  /* ---------- Header ---------- */
+  .site-header {
+    position: sticky; top: 0; z-index: 40;
+    background: color-mix(in srgb, var(--bg) 82%, transparent);
+    backdrop-filter: saturate(160%) blur(14px);
+    border-bottom: 1px solid var(--line);
+  }
+  .site-header .wrap { display: flex; align-items: center; gap: 1rem; height: 62px; }
+  .brand { display: inline-flex; align-items: center; gap: .55rem; font-weight: 800; letter-spacing: -.02em; text-decoration: none; font-size: 1.05rem; }
+  .brand .dot {
+    width: 26px; height: 26px; border-radius: 9px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    display: grid; place-items: center; color: #fff; font-size: .85rem;
+  }
+  .site-nav { margin-left: auto; display: flex; align-items: center; gap: .35rem; }
+  .site-nav a {
+    text-decoration: none; color: var(--muted); font-size: .9rem; font-weight: 600;
+    padding: .45rem .7rem; border-radius: 999px;
+  }
+  .site-nav a:hover { color: var(--ink); background: var(--bg-soft); }
+  @media (max-width: 640px) {
+    .site-nav a.hide-sm { display: none; }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero { padding: 3.2rem 0 2rem; }
+  .hero .eyebrow {
+    display: inline-flex; align-items: center; gap: .45rem;
+    font-size: .8rem; font-weight: 700; letter-spacing: .02em;
+    color: var(--accent); background: var(--accent-soft);
+    padding: .38rem .7rem; border-radius: 999px; margin-bottom: 1rem;
+  }
+  .hero h1 {
+    margin: 0 0 .8rem; font-size: clamp(1.75rem, 4.4vw, 2.9rem);
+    line-height: 1.25; letter-spacing: -.035em; font-weight: 850;
+  }
+  .hero h1 em {
+    font-style: normal;
+    background: linear-gradient(100deg, var(--accent), var(--accent-2) 65%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .hero p.lead { margin: 0; color: var(--ink-soft); font-size: clamp(1rem, 1.6vw, 1.12rem); max-width: 46rem; }
+  .hero-stats {
+    display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.5rem; padding: 0; list-style: none;
+  }
+  .hero-stats li {
+    display: flex; align-items: baseline; gap: .4rem;
+    background: var(--card); border: 1px solid var(--line); border-radius: 999px;
+    padding: .45rem .85rem; font-size: .86rem; color: var(--muted); box-shadow: var(--shadow-sm);
+  }
+  .hero-stats b { color: var(--ink); font-size: .95rem; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.6rem; }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: .45rem;
+    border-radius: 12px; padding: .78rem 1.15rem; font-weight: 750; font-size: .95rem;
+    text-decoration: none; border: 1px solid transparent; cursor: pointer;
+    transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+  }
+  .btn:active { transform: translateY(1px); }
+  .btn-primary {
+    color: #fff; background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    box-shadow: 0 8px 20px color-mix(in srgb, var(--accent) 28%, transparent);
+  }
+  .btn-primary:hover { box-shadow: 0 10px 26px color-mix(in srgb, var(--accent) 38%, transparent); }
+  .btn-ghost { background: var(--card); border-color: var(--line-strong); color: var(--ink); }
+  .btn-ghost:hover { background: var(--bg-soft); }
+
+  /* ---------- Filters ---------- */
+  .filters {
+    position: sticky; top: 62px; z-index: 30;
+    background: color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 1rem 1.1rem; margin: 1.4rem 0 1.2rem; box-shadow: var(--shadow-sm);
+  }
+  .filter-row { display: flex; align-items: center; gap: .85rem; flex-wrap: wrap; }
+  .filter-row + .filter-row { margin-top: .7rem; padding-top: .7rem; border-top: 1px dashed var(--line); }
+  .filter-label {
+    font-size: .8rem; font-weight: 800; color: var(--muted);
+    letter-spacing: .04em; min-width: 4.2rem;
+  }
+  .chips { display: flex; gap: .4rem; flex-wrap: wrap; }
+  .chip {
+    border: 1px solid var(--line-strong); background: var(--card); color: var(--ink-soft);
+    border-radius: 999px; padding: .48rem .85rem; font-size: .88rem; font-weight: 650;
+    cursor: pointer; transition: background .12s ease, color .12s ease, border-color .12s ease;
+  }
+  .chip:hover { background: var(--bg-soft); }
+  .chip[aria-pressed="true"] {
+    background: var(--ink); color: var(--bg); border-color: var(--ink);
+  }
+  .filter-meta { margin-left: auto; display: flex; align-items: center; gap: .7rem; font-size: .84rem; color: var(--muted); }
+  .filter-meta .reset {
+    background: none; border: 0; cursor: pointer; color: var(--accent);
+    font-weight: 750; padding: .2rem .1rem; text-decoration: underline; text-underline-offset: 3px;
+  }
+
+  /* ---------- Product grid ---------- */
+  .products-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin: 1.6rem 0 .9rem; }
+  .products-head h2 { margin: 0; font-size: 1.25rem; letter-spacing: -.02em; }
+  .products-head .hint { font-size: .84rem; color: var(--muted); }
+  .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); padding-bottom: 7rem; }
+  .card {
+    position: relative; display: flex; flex-direction: column;
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 1.1rem 1.1rem 1.15rem; box-shadow: var(--shadow-sm);
+    transition: box-shadow .16s ease, transform .16s ease, border-color .16s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+  .card.is-selected { border-color: color-mix(in srgb, var(--accent) 55%, var(--line)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 22%, transparent); }
+  .card-top { display: flex; align-items: flex-start; gap: .6rem; }
+  .badge {
+    display: inline-flex; align-items: center; gap: .3rem; font-size: .74rem; font-weight: 800;
+    padding: .3rem .6rem; border-radius: 999px; letter-spacing: .01em;
+  }
+  .badge.commute { color: var(--commute); background: color-mix(in srgb, var(--commute) 12%, transparent); }
+  .badge.work { color: var(--work); background: color-mix(in srgb, var(--work) 13%, transparent); }
+  .badge.desk { color: var(--desk); background: color-mix(in srgb, var(--desk) 14%, transparent); }
+  .pick {
+    margin-left: auto; display: inline-flex; align-items: center; gap: .4rem;
+    font-size: .78rem; font-weight: 700; color: var(--muted); cursor: pointer; user-select: none;
+    border: 1px solid var(--line); border-radius: 999px; padding: .28rem .6rem; background: var(--bg);
+  }
+  .pick input { accent-color: var(--accent); width: 15px; height: 15px; margin: 0; }
+  .pick:hover { color: var(--ink); }
+  .card h3 { margin: .7rem 0 .15rem; font-size: 1.06rem; letter-spacing: -.015em; line-height: 1.35; }
+  .card .brandline { font-size: .8rem; color: var(--muted); font-weight: 600; }
+  .price-block { display: flex; align-items: baseline; gap: .5rem; flex-wrap: wrap; margin: .7rem 0 .1rem; }
+  .price { font-size: 1.4rem; font-weight: 850; letter-spacing: -.03em; }
+  .price small { font-size: .85rem; font-weight: 700; color: var(--muted); margin-left: .1rem; }
+  .price-was { font-size: .82rem; color: var(--muted); text-decoration: line-through; }
+  .save { font-size: .72rem; font-weight: 850; color: #d92d20; background: color-mix(in srgb, #d92d20 10%, transparent); border-radius: 6px; padding: .1rem .35rem; }
+  @media (prefers-color-scheme: dark) { .save { color: #ff8b80; } }
+  .price-note { font-size: .74rem; color: var(--muted); margin: 0 0 .8rem; }
+  .tags { display: flex; gap: .3rem; flex-wrap: wrap; margin-bottom: .85rem; }
+  .tag {
+    font-size: .72rem; font-weight: 700; color: var(--ink-soft);
+    background: var(--bg-soft); border-radius: 7px; padding: .22rem .45rem;
+  }
+  .kv { display: grid; gap: .5rem; margin: 0 0 1rem; }
+  .kv div { display: grid; grid-template-columns: 4.6rem 1fr; gap: .55rem; font-size: .84rem; line-height: 1.5; }
+  .kv dt { color: var(--muted); font-weight: 750; font-size: .76rem; padding-top: .12rem; }
+  .kv dd { margin: 0; color: var(--ink-soft); }
+  .spec-mini { display: flex; flex-wrap: wrap; gap: .3rem .55rem; margin: 0 0 1rem; padding: .6rem .7rem; background: var(--bg-soft); border-radius: 10px; font-size: .76rem; color: var(--ink-soft); }
+  .spec-mini span::before { content: "·"; margin-right: .35rem; color: var(--muted); }
+  .spec-mini span:first-child::before { content: ""; margin: 0; }
+  .card-cta { margin-top: auto; display: grid; gap: .45rem; }
+  .btn-buy {
+    width: 100%; text-align: center; text-decoration: none; font-weight: 800; font-size: .92rem;
+    color: #fff; background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    border-radius: 12px; padding: .8rem 1rem; box-shadow: 0 6px 16px color-mix(in srgb, var(--accent) 24%, transparent);
+    transition: filter .12s ease;
+  }
+  .btn-buy:hover { filter: brightness(1.06); }
+  .btn-buy span.arrow { margin-left: .25rem; }
+  .disclosure-inline { font-size: .7rem; color: var(--muted); text-align: center; line-height: 1.45; }
+
+  .empty {
+    grid-column: 1 / -1; text-align: center; padding: 3.5rem 1rem;
+    background: var(--card); border: 1px dashed var(--line-strong); border-radius: var(--radius);
+    color: var(--muted);
+  }
+  .empty strong { display: block; color: var(--ink); font-size: 1.05rem; margin-bottom: .35rem; }
+
+  /* ---------- Guide ---------- */
+  .guide { padding: 1rem 0 4rem; }
+  .guide h2 { font-size: 1.25rem; letter-spacing: -.02em; margin: 0 0 .9rem; }
+  .guide-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .guide-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.1rem 1.15rem; box-shadow: var(--shadow-sm); }
+  .guide-card h3 { margin: 0 0 .45rem; font-size: .98rem; }
+  .guide-card p { margin: 0; font-size: .86rem; color: var(--ink-soft); }
+  .guide-card .num { display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 8px; background: var(--accent-soft); color: var(--accent); font-size: .78rem; font-weight: 850; margin-bottom: .5rem; }
+
+  /* ---------- Compare tray ---------- */
+  .tray {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 45;
+    transform: translateY(115%); transition: transform .22s ease;
+    padding: .7rem clamp(.7rem, 3vw, 2rem) calc(.7rem + env(safe-area-inset-bottom));
+  }
+  .tray.open { transform: translateY(0); }
+  .tray-inner {
+    width: min(1180px, 100%);
+    margin-inline: auto; display: flex; align-items: center; gap: .8rem;
+    background: color-mix(in srgb, var(--ink) 94%, transparent); color: var(--bg);
+    border-radius: 16px; padding: .65rem .8rem; box-shadow: var(--shadow-lg);
+  }
+  .tray-thumbs { display: flex; gap: .35rem; }
+  .tray-thumb { font-size: .74rem; font-weight: 700; background: color-mix(in srgb, var(--bg) 16%, transparent); padding: .3rem .55rem; border-radius: 8px; white-space: nowrap; max-width: 11rem; overflow: hidden; text-overflow: ellipsis; }
+  .tray-count { font-size: .82rem; font-weight: 700; opacity: .85; white-space: nowrap; }
+  .tray-actions { margin-left: auto; display: flex; gap: .4rem; }
+  .tray button { border-radius: 10px; padding: .55rem .85rem; font-size: .85rem; font-weight: 800; cursor: pointer; border: 1px solid transparent; }
+  .tray .go { background: var(--bg); color: var(--ink); }
+  .tray .go:disabled { opacity: .45; cursor: not-allowed; }
+  .tray .clear { background: transparent; color: inherit; border-color: color-mix(in srgb, var(--bg) 30%, transparent); }
+  @media (max-width: 560px) {
+    .tray-thumbs { display: none; }
+  }
+
+  /* ---------- Compare modal ---------- */
+  .modal {
+    position: fixed; inset: 0; z-index: 60; display: none;
+    background: color-mix(in srgb, #000 55%, transparent);
+    padding: clamp(.5rem, 3vw, 2rem);
+  }
+  .modal.open { display: grid; place-items: center; }
+  .modal-panel {
+    width: min(1040px, 100%); max-height: min(88vh, 900px); overflow: auto;
+    background: var(--bg); color: var(--ink); border-radius: 20px;
+    box-shadow: var(--shadow-lg); border: 1px solid var(--line);
+  }
+  .modal-head {
+    position: sticky; top: 0; z-index: 2;
+    display: flex; align-items: center; gap: 1rem;
+    padding: 1rem 1.15rem; background: color-mix(in srgb, var(--bg) 94%, transparent);
+    backdrop-filter: blur(8px); border-bottom: 1px solid var(--line);
+  }
+  .modal-head h2 { margin: 0; font-size: 1.1rem; letter-spacing: -.02em; }
+  .modal-head .x {
+    margin-left: auto; background: var(--card); border: 1px solid var(--line-strong);
+    width: 36px; height: 36px; border-radius: 10px; cursor: pointer; font-size: 1rem; line-height: 1;
+  }
+  .table-scroll { overflow-x: auto; padding: 0 0 1rem; }
+  table.compare { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 640px; font-size: .86rem; }
+  table.compare th, table.compare td { padding: .8rem .85rem; vertical-align: top; text-align: left; border-bottom: 1px solid var(--line); }
+  table.compare thead th { background: var(--card); }
+  table.compare thead th:first-child { position: sticky; left: 0; z-index: 2; }
+  table.compare tbody th {
+    width: 8.2rem; min-width: 8.2rem; color: var(--muted); font-weight: 800; font-size: .78rem;
+    background: var(--card); position: sticky; left: 0; z-index: 1;
+    border-right: 1px solid var(--line);
+  }
+  table.compare td { color: var(--ink-soft); min-width: 12rem; }
+  table.compare .p-name { font-weight: 800; color: var(--ink); font-size: .95rem; display: block; margin-bottom: .15rem; }
+  table.compare .p-price { font-weight: 800; color: var(--ink); }
+  table.compare .p-meta { font-size: .76rem; color: var(--muted); }
+  table.compare .cell-remove {
+    margin-top: .35rem; font-size: .72rem; color: var(--muted); background: none;
+    border: 0; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; padding: 0;
+  }
+  .modal-foot { padding: 0 1.15rem 1.2rem; font-size: .76rem; color: var(--muted); }
+
+  /* ---------- Toast ---------- */
+  .toast {
+    position: fixed; left: 50%; bottom: 6rem; transform: translate(-50%, 1rem);
+    background: var(--ink); color: var(--bg); padding: .7rem 1rem; border-radius: 12px;
+    font-size: .85rem; font-weight: 650; box-shadow: var(--shadow-lg);
+    opacity: 0; pointer-events: none; transition: opacity .18s ease, transform .18s ease; z-index: 70;
+    max-width: calc(100% - 2rem); text-align: center;
+  }
+  .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+  /* ---------- Footer ---------- */
+  .site-footer { border-top: 1px solid var(--line); background: var(--bg-soft); padding: 2.2rem 0 3rem; }
+  .site-footer .wrap { display: grid; gap: 1rem; }
+  .footer-disclosure {
+    background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--accent);
+    border-radius: 12px; padding: .95rem 1.05rem; font-size: .86rem; color: var(--ink-soft);
+  }
+  .footer-disclosure strong { color: var(--ink); }
+  .footer-meta { display: flex; flex-wrap: wrap; gap: .5rem 1.2rem; font-size: .78rem; color: var(--muted); }
+  .footer-meta a { color: var(--muted); }
+  .footer-brand { font-weight: 850; letter-spacing: -.02em; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; animation: none !important; }
+  }
+  @media (max-width: 640px) {
+    .hero { padding-top: 2.2rem; }
+    .filters { position: static; }
+    .filter-label { min-width: auto; }
+    .filter-meta { margin-left: 0; width: 100%; justify-content: space-between; }
+    .kv div { grid-template-columns: 4.2rem 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="dot" aria-hidden="true">♪</span>사운드픽</a>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="#products">제품 비교</a>
+      <a href="#guide" class="hide-sm">구매 가이드</a>
+      <a href="#disclosure">제휴 안내</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">🎧 2026년 11월 기준 · 실제 판매가 조사</span>
+      <h1>10~40만 원대 음향기기,<br /><em>용도와 예산으로 한 번에 비교</em>하세요.</h1>
+      <p class="lead">
+        출퇴근 노이즈캔슬링부터 홈레코딩용 모니터링, 책상 위 스피커까지.
+        광고 문구 대신 제조사 스펙과 국내 최저가를 기준으로 8종을 정리했습니다.
+        최대 3개까지 골라 나란히 비교해 보세요.
+      </p>
+      <ul class="hero-stats">
+        <li><b>8</b>개 모델</li>
+        <li><b>3</b>가지 용도</li>
+        <li>가격 조사일 <b data-asof>2026.11.25</b></li>
+        <li>최저가 출처 <b>다나와</b></li>
+      </ul>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#products">제품 보러 가기 <span aria-hidden="true">↓</span></a>
+        <a class="btn btn-ghost" href="#guide">고르는 기준 보기</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <section class="filters" aria-label="제품 필터">
+      <div class="filter-row">
+        <span class="filter-label" id="label-use">용도</span>
+        <div class="chips" role="group" aria-labelledby="label-use" id="useChips">
+          <button class="chip" type="button" data-use="all" aria-pressed="true">전체</button>
+          <button class="chip" type="button" data-use="commute" aria-pressed="false">출퇴근·노캔</button>
+          <button class="chip" type="button" data-use="work" aria-pressed="false">음악 작업·모니터링</button>
+          <button class="chip" type="button" data-use="desk" aria-pressed="false">데스크·홈오디오</button>
+        </div>
+      </div>
+      <div class="filter-row">
+        <span class="filter-label" id="label-budget">예산</span>
+        <div class="chips" role="group" aria-labelledby="label-budget" id="budgetChips">
+          <button class="chip" type="button" data-budget="all" aria-pressed="true">전체</button>
+          <button class="chip" type="button" data-budget="b10" aria-pressed="false">10만 원대</button>
+          <button class="chip" type="button" data-budget="b20" aria-pressed="false">20~30만 원대</button>
+          <button class="chip" type="button" data-budget="b40" aria-pressed="false">40만 원 이상</button>
+        </div>
+        <div class="filter-meta">
+          <span id="resultCount" aria-live="polite">8개 표시 중</span>
+          <button class="reset" type="button" id="resetAll">필터 초기화</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="products-head">
+      <h2 id="products">제품 비교</h2>
+      <span class="hint">카드의 ‘비교’를 눌러 최대 3개까지 담을 수 있어요</span>
+    </div>
+
+    <section class="grid" id="productGrid" aria-label="제품 목록">
+      <!-- 카드는 아래 스크립트의 PRODUCTS 데이터로 자동 생성됩니다. -->
+    </section>
+
+    <section class="guide" id="guide">
+      <h2>사기 전에 확인할 3가지</h2>
+      <div class="guide-grid">
+        <article class="guide-card">
+          <span class="num">1</span>
+          <h3>코덱부터 확인하세요</h3>
+          <p>아이폰은 AAC, 안드로이드는 LDAC·aptX 계열까지 쓸 수 있습니다. 같은 가격이면 쓰는 기기에서 지원하는 코덱이 있는지 먼저 보세요. LDAC 미지원 제품은 고해상도 무선 재생이 되지 않습니다.</p>
+        </article>
+        <article class="guide-card">
+          <span class="num">2</span>
+          <h3>노캔은 ‘적응형’인지</h3>
+          <p>적응형 ANC는 주변 소음에 맞춰 단계가 자동으로 바뀝니다. 통화용 마이크 빔포밍, 멀티포인트(두 기기 동시 연결) 지원 여부도 출퇴근용이라면 실사용 만족도를 크게 가릅니다.</p>
+        </article>
+        <article class="guide-card">
+          <span class="num">3</span>
+          <h3>작업용은 유선·지연을 보세요</h3>
+          <p>모니터링 헤드폰과 오디오 인터페이스는 지연(latency)이 중요합니다. 유선 연결과 다이렉트 모니터링·루프백 지원 여부를 확인하고, 스피커는 책상 크기와 저역 한계(Hz)를 함께 보세요.</p>
+        </article>
+      </div>
+    </section>
+  </div>
+</main>
+
+<div class="tray" id="tray" aria-label="비교 담기">
+  <div class="tray-inner">
+    <span class="tray-count" id="trayCount">0 / 3 선택</span>
+    <div class="tray-thumbs" id="trayThumbs"></div>
+    <div class="tray-actions">
+      <button class="clear" type="button" id="clearPick">비우기</button>
+      <button class="go" type="button" id="openCompare" disabled>나란히 비교</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="compareModal" role="dialog" aria-modal="true" aria-labelledby="compareTitle">
+  <div class="modal-panel">
+    <div class="modal-head">
+      <h2 id="compareTitle">나란히 비교</h2>
+      <button class="x" type="button" id="closeCompare" aria-label="비교 창 닫기">✕</button>
+    </div>
+    <div class="table-scroll">
+      <table class="compare" id="compareTable">
+        <caption class="sr-only">선택한 제품의 스펙과 가격 비교</caption>
+        <thead></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="modal-foot">
+      가격은 <span data-asof-long>2026년 11월 25일</span> 다나와 최저가(정품 기준) 조회값이며, 판매처 사정에 따라 수시로 바뀝니다.
+      스펙은 제조사·다나와 표기를 정리한 것으로, 음질의 호불호는 개인차가 있습니다.
+    </p>
+  </div>
+</div>
+
+<footer class="site-footer" id="disclosure">
+  <div class="wrap">
+    <div class="footer-disclosure">
+      <strong>공정거래위원회 고지</strong><br />
+      이 포스팅/페이지는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
+      상품 가격과 재고는 링크를 연 시점의 판매처 정보가 우선합니다.
+    </div>
+    <div class="footer-meta">
+      <span class="footer-brand">사운드픽</span>
+      <span>가격 조사: <span data-asof>2026.11.25</span> · 다나와 최저가(정품) 기준</span>
+      <span>스펙 출처: 제조사·다나와 상품 정보</span>
+      <span><a href="#top">맨 위로 ↑</a></span>
+    </div>
+    <p style="margin:0;font-size:.76rem;color:var(--muted)">
+      본 페이지의 가격·스펙은 작성 시점 기준이며, 실제 구매 조건은 판매처 페이지에서 확인하세요.
+      제품명과 상표는 각 권리자의 소유입니다.
+    </p>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "10~40만 원대 음향기기 비교",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "item": { "@type": "Product", "name": "소니 WH-CH720N", "brand": "SONY" } },
+    { "@type": "ListItem", "position": 2, "item": { "@type": "Product", "name": "소니 WH-1000XM5", "brand": "SONY" } },
+    { "@type": "ListItem", "position": 3, "item": { "@type": "Product", "name": "애플 에어팟 프로 3", "brand": "Apple" } },
+    { "@type": "ListItem", "position": 4, "item": { "@type": "Product", "name": "보스 QC 울트라 헤드폰 2세대", "brand": "Bose" } },
+    { "@type": "ListItem", "position": 5, "item": { "@type": "Product", "name": "오디오테크니카 ATH-M50x", "brand": "Audio-Technica" } },
+    { "@type": "ListItem", "position": 6, "item": { "@type": "Product", "name": "포커스라이트 Scarlett Solo 4세대", "brand": "Focusrite" } },
+    { "@type": "ListItem", "position": 7, "item": { "@type": "Product", "name": "프리소너스 Eris 3.5 BT Gen2", "brand": "PreSonus" } },
+    { "@type": "ListItem", "position": 8, "item": { "@type": "Product", "name": "오디오엔진 A2+ Wireless Next Gen", "brand": "Audioengine" } }
+  ]
+}
+</script>
+
+<script>
+/* =========================================================================
+   [1] 제휴 링크 설정 — 여기만 바꾸면 바로 수익화됩니다.
+   -------------------------------------------------------------------------
+   쿠팡 파트너스에서 상품별 '링크 만들기'로 만든 주소를 넣으면 끝입니다.
+   (쿠팡 파트너스 → 상품 검색 → 링크 생성 → 짧은 링크 복사)
+   값이 "#"로 시작하면 아직 링크가 연결되지 않은 상태로 보고,
+   버튼을 눌렀을 때 안내 문구만 뜹니다.
+   ========================================================================= */
+const AFFILIATE_LINKS = {
+  "sony-wh-ch720n":            "#coupang-partner-link-sony-wh-ch720n",
+  "sony-wh-1000xm5":           "#coupang-partner-link-sony-wh-1000xm5",
+  "apple-airpods-pro-3":       "#coupang-partner-link-apple-airpods-pro-3",
+  "bose-qc-ultra-2":           "#coupang-partner-link-bose-qc-ultra-2",
+  "ath-m50x":                  "#coupang-partner-link-ath-m50x",
+  "scarlett-solo-4th":         "#coupang-partner-link-scarlett-solo-4th",
+  "presonus-eris-35-bt-gen2":  "#coupang-partner-link-presonus-eris-35-bt-gen2",
+  "audioengine-a2-plus":       "#coupang-partner-link-audioengine-a2-plus"
+};
+
+/* =========================================================================
+   [2] 제품 데이터 — 가격은 2026-11-25 다나와 최저가(정품) 조회값입니다.
+   판매가가 바뀌면 price / launchPrice만 고쳐 주세요. (원 단위 숫자)
+   ========================================================================= */
+const PRODUCTS = [
+  {
+    id: "sony-wh-ch720n",
+    name: "소니 WH-CH720N",
+    brand: "SONY",
+    use: "commute",
+    price: 128750,
+    launchPrice: 199000,
+    tags: ["10만 원대 ANC", "192g", "35시간 재생"],
+    sound: "30mm 다이나믹 드라이버 · SBC/AAC 지원(LDAC 미지원). 표기 재생대역 7Hz~20kHz(액티브 모드). 무선 코덱이 AAC까지라 고해상도 무선 재생은 지원하지 않음.",
+    link: "블루투스 5.2 · ANC/주변소리 · 멀티포인트 · USB-C · 3.5mm 유선 사용 가능",
+    target: "10만 원대로 첫 노이즈캔슬링 헤드폰을 찾는 분, 통학·출퇴근·도서관",
+    specs: ["유닛 30mm", "재생 35시간(ANC) / 50시간(ANC OFF)", "무게 192g", "코덱 SBC·AAC", "충전 USB-C"]
+  },
+  {
+    id: "sony-wh-1000xm5",
+    name: "소니 WH-1000XM5",
+    brand: "SONY",
+    use: "commute",
+    price: 393810,
+    launchPrice: 519000,
+    tags: ["LDAC", "적응형 ANC", "30시간"],
+    sound: "30mm 드라이버 · LDAC 지원(4Hz~40kHz) · 48Ω·102dB. EQ 수동 조절과 360 공간음향(돌비애트모스) 지원.",
+    link: "블루투스 5.2 · LDAC/AAC/SBC · 적응형 ANC · 멀티포인트 · 30시간(ANC) · 250g · 3.5mm 유선",
+    target: "안드로이드에서 고해상도 무선 재생까지 원하는 분, 장거리 출퇴근",
+    specs: ["유닛 30mm", "재생 30시간(ANC)", "무게 250g", "코덱 LDAC·AAC·SBC", "360 공간음향·돌비애트모스"]
+  },
+  {
+    id: "apple-airpods-pro-3",
+    name: "애플 에어팟 프로 3",
+    brand: "Apple (MFHP4KH/A)",
+    use: "commute",
+    price: 291060,
+    launchPrice: 369000,
+    tags: ["아이폰 최적화", "심박수 측정", "IP57"],
+    sound: "애플 커스텀 하이 익스커션 드라이버 · AAC/SBC. 적응형 EQ·공간음향은 연결된 기기에서 자동 적용.",
+    link: "블루투스 5.3 · ANC(제조사 표기: 프로 2 대비 2배) · 대화인지 · 무선/맥세이프/USB-C · 8시간(ANC)·총 24시간 · IP57",
+    target: "아이폰·아이패드·맥을 함께 쓰는 분, 운동과 통화까지 한 케이스로 해결하려는 분",
+    specs: ["드라이버 하이 익스커션", "재생 8시간(ANC) / 총 24시간", "방수 IP57", "코덱 AAC·SBC", "심박수 측정·실시간 번역"]
+  },
+  {
+    id: "bose-qc-ultra-2",
+    name: "보스 QC 울트라 헤드폰 2세대",
+    brand: "Bose",
+    use: "commute",
+    price: 477730,
+    launchPrice: 519000,
+    tags: ["커스텀튠", "aptX Adaptive", "30시간"],
+    sound: "귀를 스캔해 보정하는 커스텀튠 + 차세대 몰입형 오디오(제조사 설명) · aptX Adaptive·LC3 지원 · EQ 수동 조절.",
+    link: "블루투스 5.4 + LE Audio · 적응형 ANC · 멀티포인트 · 30시간 · USB-C 오디오·3.5mm · 260g 접이식",
+    target: "노캔 성능과 착용감을 최우선으로 보는 분, 40만 원대 프리미엄",
+    specs: ["재생 30시간", "무게 260g", "코덱 aptX Adaptive·LC3", "충전 USB-C", "접이식·3.5mm 겸용"]
+  },
+  {
+    id: "ath-m50x",
+    name: "오디오테크니카 ATH-M50x",
+    brand: "Audio-Technica",
+    use: "work",
+    price: 220000,
+    launchPrice: null,
+    tags: ["유선 모니터링", "45mm", "스튜디오 표준"],
+    sound: "45mm 드라이버 · 38Ω · 99dB · 15Hz~28kHz. 유선 전용이라 지연이 없고, 다나와 표기 용도 분류는 ‘음악전용’.",
+    link: "유선 전용(3.5mm + 6.3mm 어댑터) · 탈착식 케이블 · 접이식. 무선·노캔은 없음",
+    target: "홈레코딩·믹싱 입문, 무선 지연이 부담스러운 작업용",
+    specs: ["유닛 45mm", "임피던스 38Ω", "감도 99dB", "재생대역 15Hz~28kHz", "무게 285g"]
+  },
+  {
+    id: "scarlett-solo-4th",
+    name: "포커스라이트 Scarlett Solo 4세대",
+    brand: "Focusrite",
+    use: "work",
+    price: 224640,
+    launchPrice: null,
+    tags: ["192kHz/24bit", "루프백", "Auto Gain"],
+    sound: "마이크 프리앰프 1채널 · 192kHz/24bit · 다이나믹레인지 120dB. Air 모드·Presence 등 보이싱과 69dB 게인 레인지 제공.",
+    link: "USB-C 버스파워 · XLR 입력(48V 팬텀) · Hi-Z 기타 입력 · 6.35mm 출력 · 헤드폰 출력 · 루프백 · 다이렉트 모니터링",
+    target: "보컬·기타 1채널 녹음, 팟캐스트·유튜브·방송 입문",
+    specs: ["192kHz/24bit", "DNR 120dB", "입력 XLR 1 + Hi-Z 1", "출력 6.35mm·헤드폰", "Auto Gain·Clip Safe·루프백"]
+  },
+  {
+    id: "presonus-eris-35-bt-gen2",
+    name: "프리소너스 Eris 3.5 BT Gen2",
+    brand: "PreSonus",
+    use: "desk",
+    price: 249000,
+    launchPrice: null,
+    tags: ["3.5인치 모니터", "블루투스", "데스크 사이즈"],
+    sound: "3.5인치 우퍼 + 1인치 트위터 · Class AB 50W · 80Hz~20kHz · 감도 98dB. 다나와 분류는 ‘스튜디오 모니터용’.",
+    link: "TRS·RCA·AUX 입력 · 헤드폰 단자 · 블루투스 5.0. 유선 모델(Eris 3.5 Gen2)은 22만 원대",
+    target: "책상에서 모니터링과 음악 감상을 겸하는 1인 작업실",
+    specs: ["출력 50W", "주파수 80Hz~20kHz", "3.5인치 우퍼 + 1인치 트위터", "입력 TRS·RCA·AUX", "블루투스 5.0"]
+  },
+  {
+    id: "audioengine-a2-plus",
+    name: "오디오엔진 A2+ Wireless Next Gen",
+    brand: "Audioengine",
+    use: "desk",
+    price: 375060,
+    launchPrice: null,
+    tags: ["알루미늄 바디", "aptX HD", "USB-C"],
+    sound: "2.75인치 우퍼 + 0.75인치 트위터 · Class AB 30W(15W×2) · 65Hz~22kHz · SNR 95dB. RCA·AUX·USB-C·블루투스 입력.",
+    link: "블루투스 5.3(aptX HD·AAC) · USB-C · RCA·AUX · 수신 최대 30m",
+    target: "디자인과 음질을 함께 보는 데스크 셋업, PC 직결로 쓰려는 분",
+    specs: ["출력 30W(15W×2)", "주파수 65Hz~22kHz", "2.75인치 우퍼 + 0.75인치 트위터", "블루투스 5.3 aptX HD", "USB-C·RCA·AUX"]
+  }
+];
+
+/* =========================================================================
+   [3] 화면 렌더링 · 필터 · 비교 로직
+   ========================================================================= */
+/* 가격 조사일 — 이 값만 바꾸면 페이지 전체 표기가 함께 바뀝니다. */
+const PRICE_ASOF = "2026.11.25";
+const PRICE_ASOF_LONG = "2026년 11월 25일";
+
+const USE_LABEL = { commute: "출퇴근·노캔", work: "음악 작업·모니터링", desk: "데스크·홈오디오" };
+const MAX_PICK = 3;
+
+const state = { use: "all", budget: "all", selected: [] };
+
+const $ = (sel, root = document) => root.querySelector(sel);
+const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+const won = (n) => n.toLocaleString("ko-KR") + "원";
+
+function budgetOf(price) {
+  if (price < 200000) return "b10";
+  if (price < 400000) return "b20";
+  return "b40";
+}
+const BUDGET_LABEL = { b10: "10만 원대", b20: "20~30만 원대", b40: "40만 원 이상" };
+
+function visibleProducts() {
+  return PRODUCTS.filter((p) => {
+    const useOk = state.use === "all" || p.use === state.use;
+    const budgetOk = state.budget === "all" || budgetOf(p.price) === state.budget;
+    return useOk && budgetOk;
+  });
+}
+
+function cardHTML(p) {
+  const picked = state.selected.includes(p.id);
+  const was = p.launchPrice ? `<span class="price-was">출시가 ${won(p.launchPrice)}</span>` : "";
+  const save = p.launchPrice ? `<span class="save">-${Math.round((1 - p.price / p.launchPrice) * 100)}%</span>` : "";
+  const tags = p.tags.map((t) => `<span class="tag">${t}</span>`).join("");
+  const specs = p.specs.map((s) => `<span>${s}</span>`).join("");
+  return `
+    <article class="card${picked ? " is-selected" : ""}" data-id="${p.id}">
+      <div class="card-top">
+        <span class="badge ${p.use}">${USE_LABEL[p.use]}</span>
+        <label class="pick">
+          <input type="checkbox" data-pick="${p.id}" ${picked ? "checked" : ""}
+                 aria-label="${p.name} 비교에 담기" />
+          비교
+        </label>
+      </div>
+      <h3>${p.name}</h3>
+      <span class="brandline">${p.brand}</span>
+      <div class="price-block">
+        <span class="price">${won(p.price)}<small>부터</small></span>
+        ${save}
+        ${was}
+      </div>
+      <p class="price-note">${PRICE_ASOF} 다나와 최저가(정품) 기준 · 변동 가능</p>
+      <div class="tags">${tags}</div>
+      <dl class="kv">
+        <div><dt>음질 성향</dt><dd>${p.sound}</dd></div>
+        <div><dt>노캔·연결</dt><dd>${p.link}</dd></div>
+        <div><dt>추천 대상</dt><dd>${p.target}</dd></div>
+      </dl>
+      <div class="spec-mini">${specs}</div>
+      <div class="card-cta">
+        <a class="btn-buy" href="${AFFILIATE_LINKS[p.id] || "#"}"
+           data-affiliate="${p.id}" target="_blank" rel="sponsored nofollow noopener">
+          최저가·제휴 링크 보기<span class="arrow" aria-hidden="true">↗</span>
+        </a>
+        <p class="disclosure-inline">쿠팡 파트너스 활동으로 수수료를 받을 수 있습니다.</p>
+      </div>
+    </article>`;
+}
+
+function render() {
+  const list = visibleProducts();
+  $$("[data-asof]").forEach((el) => { el.textContent = PRICE_ASOF; });
+  $$("[data-asof-long]").forEach((el) => { el.textContent = PRICE_ASOF_LONG; });
+  const grid = $("#productGrid");
+  grid.innerHTML = list.length
+    ? list.map(cardHTML).join("")
+    : `<div class="empty">
+         <strong>이 조건에 맞는 제품이 없습니다</strong>
+         예산이나 용도 필터를 조금 넓혀 보세요.
+       </div>`;
+  $("#resultCount").textContent = `${list.length}개 표시 중`;
+  renderTray();
+}
+
+function renderTray() {
+  const tray = $("#tray");
+  const picked = state.selected.map((id) => PRODUCTS.find((p) => p.id === id)).filter(Boolean);
+  $("#trayCount").textContent = `${picked.length} / ${MAX_PICK} 선택`;
+  $("#trayThumbs").innerHTML = picked.map((p) => `<span class="tray-thumb">${p.name}</span>`).join("");
+  $("#openCompare").disabled = picked.length < 2;
+  tray.classList.toggle("open", picked.length > 0);
+}
+
+function togglePick(id, checked) {
+  if (checked) {
+    if (state.selected.length >= MAX_PICK) {
+      toast(`비교는 최대 ${MAX_PICK}개까지 담을 수 있어요.`);
+      return false;
+    }
+    state.selected.push(id);
+  } else {
+    state.selected = state.selected.filter((x) => x !== id);
+  }
+  return true;
+}
+
+function syncCards() {
+  $$(".card").forEach((card) => {
+    const on = state.selected.includes(card.dataset.id);
+    card.classList.toggle("is-selected", on);
+    const box = $("input[data-pick]", card);
+    if (box) box.checked = on;
+  });
+}
+
+/* ---------- 비교 표 ---------- */
+function openCompare() {
+  const picked = state.selected.map((id) => PRODUCTS.find((p) => p.id === id)).filter(Boolean);
+  if (picked.length < 2) return;
+  const table = $("#compareTable");
+  table.querySelector("thead").innerHTML = `
+    <tr>
+      <th scope="col"><span class="sr-only">항목</span></th>
+      ${picked.map((p) => `
+        <th scope="col">
+          <span class="p-name">${p.name}</span>
+          <span class="p-meta">${USE_LABEL[p.use]}</span>
+          <button class="cell-remove" type="button" data-remove="${p.id}">비교에서 빼기</button>
+        </th>`).join("")}
+    </tr>`;
+  const row = (label, fn) => `
+    <tr><th scope="row">${label}</th>${picked.map((p) => `<td>${fn(p)}</td>`).join("")}</tr>`;
+
+  table.querySelector("tbody").innerHTML = [
+    row("최저가", (p) => `<span class="p-price">${won(p.price)}</span><br><span class="p-meta">${p.launchPrice ? "출시가 " + won(p.launchPrice) : "출시가 미표기"}</span>`),
+    row("예산대", (p) => BUDGET_LABEL[budgetOf(p.price)]),
+    row("음질 성향", (p) => p.sound),
+    row("노캔·연결성", (p) => p.link),
+    row("추천 대상", (p) => p.target),
+    row("핵심 스펙", (p) => p.specs.join(" · ")),
+    row("구매", (p) => `<a class="btn-buy" style="display:inline-block;padding:.55rem .8rem;font-size:.82rem" href="${AFFILIATE_LINKS[p.id] || "#"}" data-affiliate="${p.id}" target="_blank" rel="sponsored nofollow noopener">최저가 보기 ↗</a>`)
+  ].join("");
+
+  $("#compareModal").classList.add("open");
+  document.body.style.overflow = "hidden";
+  $("#closeCompare").focus();
+}
+
+function closeCompare() {
+  $("#compareModal").classList.remove("open");
+  document.body.style.overflow = "";
+}
+
+/* ---------- 토스트 ---------- */
+let toastTimer;
+function toast(msg) {
+  const el = $("#toast");
+  el.textContent = msg;
+  el.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove("show"), 2600);
+}
+
+/* ---------- 이벤트 ---------- */
+$("#useChips").addEventListener("click", (e) => {
+  const btn = e.target.closest("button[data-use]");
+  if (!btn) return;
+  state.use = btn.dataset.use;
+  $$("#useChips .chip").forEach((b) => b.setAttribute("aria-pressed", String(b === btn)));
+  render();
+});
+
+$("#budgetChips").addEventListener("click", (e) => {
+  const btn = e.target.closest("button[data-budget]");
+  if (!btn) return;
+  state.budget = btn.dataset.budget;
+  $$("#budgetChips .chip").forEach((b) => b.setAttribute("aria-pressed", String(b === btn)));
+  render();
+});
+
+$("#resetAll").addEventListener("click", () => {
+  state.use = "all";
+  state.budget = "all";
+  $$("#useChips .chip, #budgetChips .chip").forEach((b) => {
+    b.setAttribute("aria-pressed", String(b.dataset.use === "all" || b.dataset.budget === "all"));
+  });
+  render();
+  toast("필터를 초기화했어요.");
+});
+
+$("#productGrid").addEventListener("change", (e) => {
+  const box = e.target.closest("input[data-pick]");
+  if (!box) return;
+  const ok = togglePick(box.dataset.pick, box.checked);
+  if (!ok) box.checked = false;
+  syncCards();
+  renderTray();
+});
+
+$("#productGrid").addEventListener("click", (e) => {
+  const link = e.target.closest("a[data-affiliate]");
+  if (!link) return;
+  const href = link.getAttribute("href") || "";
+  if (href.startsWith("#")) {
+    e.preventDefault();
+    toast("제휴 링크가 아직 연결되지 않았습니다. README의 링크 교체 가이드를 참고하세요.");
+  }
+});
+
+$("#trayThumbs").addEventListener("click", (e) => {
+  const thumb = e.target.closest(".tray-thumb");
+  if (!thumb) return;
+  // 썸네일을 누르면 해당 제품을 비교에서 뺍니다.
+  const p = PRODUCTS.find((x) => x.name === thumb.textContent.trim());
+  if (!p) return;
+  state.selected = state.selected.filter((x) => x !== p.id);
+  syncCards();
+  renderTray();
+});
+
+$("#clearPick").addEventListener("click", () => {
+  state.selected = [];
+  syncCards();
+  renderTray();
+});
+
+$("#openCompare").addEventListener("click", openCompare);
+$("#closeCompare").addEventListener("click", closeCompare);
+$("#compareModal").addEventListener("click", (e) => {
+  if (e.target.id === "compareModal") closeCompare();
+});
+$("#compareTable").addEventListener("click", (e) => {
+  const rm = e.target.closest("button[data-remove]");
+  if (rm) {
+    state.selected = state.selected.filter((id) => id !== rm.dataset.remove);
+    syncCards();
+    renderTray();
+    if (state.selected.length >= 2) openCompare();
+    else closeCompare();
+    return;
+  }
+  const link = e.target.closest("a[data-affiliate]");
+  if (link && (link.getAttribute("href") || "").startsWith("#")) {
+    e.preventDefault();
+    toast("제휴 링크가 아직 연결되지 않았습니다. README의 링크 교체 가이드를 참고하세요.");
+  }
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && $("#compareModal").classList.contains("open")) closeCompare();
+});
+
+render();
+</script>
+</body>
+</html>

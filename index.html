@@ -176,6 +176,18 @@
     font-weight: 750; padding: .2rem .1rem; text-decoration: underline; text-underline-offset: 3px;
   }
 
+  /* ---------- Product search ---------- */
+  .product-search { flex: 1 1 16rem; min-width: 0; position: relative; display: flex; align-items: center; }
+  .product-search svg { position: absolute; left: .85rem; width: 18px; height: 18px; color: var(--muted); pointer-events: none; }
+  .product-search input {
+    width: 100%; min-width: 0; padding: .65rem .8rem .65rem 2.55rem;
+    border: 1px solid var(--line-strong); border-radius: 12px;
+    background: var(--card); color: var(--ink); font: inherit; font-size: 1rem;
+  }
+  .product-search input::placeholder { color: var(--muted); opacity: 1; }
+  .product-search input:focus { border-color: var(--accent); }
+  @media (max-width: 640px) { .search-row { gap: .45rem; } .product-search { flex-basis: 100%; } }
+
   /* ---------- Product grid ---------- */
   .products-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin: 1.6rem 0 .9rem; }
   .products-head h2 { margin: 0; font-size: 1.25rem; letter-spacing: -.02em; }
@@ -393,6 +405,13 @@
 
   <div class="wrap">
     <section class="filters" aria-label="제품 필터">
+      <div class="filter-row search-row">
+        <label class="filter-label" for="productSearch">검색</label>
+        <div class="product-search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg>
+          <input type="search" id="productSearch" placeholder="제품명, 브랜드, 기능 검색 (예: 소니, XM5, 노캔)" autocomplete="off" />
+        </div>
+      </div>
       <div class="filter-row">
         <span class="filter-label" id="label-use">용도</span>
         <div class="chips" role="group" aria-labelledby="label-use" id="useChips">
@@ -661,7 +680,7 @@ const PRICE_ASOF_LONG = "2026년 11월 25일";
 const USE_LABEL = { commute: "출퇴근·노캔", work: "음악 작업·모니터링", desk: "데스크·홈오디오" };
 const MAX_PICK = 3;
 
-const state = { use: "all", budget: "all", selected: [] };
+const state = { use: "all", budget: "all", search: "", selected: [] };
 
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
@@ -674,11 +693,31 @@ function budgetOf(price) {
 }
 const BUDGET_LABEL = { b10: "10만 원대", b20: "20~30만 원대", b40: "40만 원 이상" };
 
+/* 제품별 검색 별칭 — 표시되는 상품 정보는 변경하지 않습니다. */
+const SEARCH_ALIASES = {
+  "sony-wh-ch720n": "헤드폰 headphone 노이즈캔슬링 노캔 ANC 무선 블루투스 멀티포인트 가성비",
+  "sony-wh-1000xm5": "헤드폰 headphone 노이즈캔슬링 노캔 ANC 무선 블루투스 멀티포인트 LDAC 프리미엄",
+  "apple-airpods-pro-3": "이어폰 earbuds 에어팟프로3 airpods pro 3 노이즈캔슬링 노캔 ANC 무선 블루투스 아이폰",
+  "bose-qc-ultra-2": "헤드폰 headphone quietcomfort ultra 노이즈캔슬링 노캔 ANC 무선 블루투스 멀티포인트 프리미엄",
+  "ath-m50x": "헤드폰 headphone 유선 모니터링 스튜디오 믹싱",
+  "scarlett-solo-4th": "오디오 인터페이스 audio interface 오인페 스칼렛 솔로 녹음 홈레코딩",
+  "presonus-eris-35-bt-gen2": "스피커 speaker 모니터 스피커 데스크 책상 블루투스",
+  "audioengine-a2-plus": "스피커 speaker A2+ A2 plus 데스크 책상 무선 블루투스"
+};
+const normalizeSearch = (value) => String(value).normalize("NFKC").toLowerCase().replace(/[^\p{L}\p{N}]/gu, "");
+function matchesSearch(p) {
+  const terms = state.search.trim().split(/\s+/).map(normalizeSearch).filter(Boolean);
+  if (!terms.length) return true;
+  const specs = p.specs.filter((spec) => p.id !== "scarlett-solo-4th" || !spec.includes("헤드폰"));
+  const haystack = normalizeSearch([p.name, p.brand, p.id, USE_LABEL[p.use], SEARCH_ALIASES[p.id] || "", ...p.tags, ...specs].join(" "));
+  return terms.every((term) => haystack.includes(term));
+}
+
 function visibleProducts() {
   return PRODUCTS.filter((p) => {
     const useOk = state.use === "all" || p.use === state.use;
     const budgetOk = state.budget === "all" || budgetOf(p.price) === state.budget;
-    return useOk && budgetOk;
+    return useOk && budgetOk && matchesSearch(p);
   });
 }
 
@@ -732,7 +771,7 @@ function render() {
     ? list.map(cardHTML).join("")
     : `<div class="empty">
          <strong>이 조건에 맞는 제품이 없습니다</strong>
-         예산이나 용도 필터를 조금 넓혀 보세요.
+         검색어를 바꾸거나 예산·용도 필터를 조금 넓혀 보세요.
        </div>`;
   $("#resultCount").textContent = `${list.length}개 표시 중`;
   renderTray();
@@ -834,9 +873,16 @@ $("#budgetChips").addEventListener("click", (e) => {
   render();
 });
 
+$("#productSearch").addEventListener("input", (e) => {
+  state.search = e.target.value;
+  render();
+});
+
 $("#resetAll").addEventListener("click", () => {
   state.use = "all";
   state.budget = "all";
+  state.search = "";
+  $("#productSearch").value = "";
   $$("#useChips .chip, #budgetChips .chip").forEach((b) => {
     b.setAttribute("aria-pressed", String(b.dataset.use === "all" || b.dataset.budget === "all"));
   });
